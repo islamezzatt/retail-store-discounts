@@ -73,7 +73,7 @@ curl --request POST \
 	"expiresIn": 3600000
 }
 ```
-#### Calculate Discount API
+#### Calculate Discount API (Any request other than login or register must have the header Authorization)
 - Request
 ```
 curl --request POST \
