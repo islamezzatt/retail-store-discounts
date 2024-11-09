@@ -9,7 +9,6 @@ a discount).
 5. The percentage based discounts do not apply on groceries.
 6. A user can get only one of the percentage based discounts on a bill.
 
-
 ### Prerequisites:
 - Java 21
 - Spring Boot 3.2.0
