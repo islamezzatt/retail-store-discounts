@@ -110,8 +110,15 @@ curl --request POST \
 	"totalAmountAfterDiscount": 280.0
 }
 ```
-
+## jacoco report is generated in target/site/jacoco/index.html after running - mvn clean verify
 ## UML Class Diagram
 ### uml draw.io is included in the repo /documents 
 ![Retail-Store-Discount drawio](https://github.com/user-attachments/assets/1e670283-1a79-40b1-ad09-78ca5a4fa91a)
 
+
+## SonarQube Report 
+### SonarQube report is generated locally by running sonarQube locally using docker and conencting the spring boot project with sonarQube
+
+- mvn clean verify sonar:sonar -Dsonar.projectKey=retail-store-discounts -Dsonar.projectName='retail-store-discounts' -Dsonar.host.url=http://localhost:9000 -Dsonar.token= sonar-project-key
+
+![SonarQube Report](https://github.com/user-attachments/assets/308ae7d6-62bf-4d64-8a0b-3aedbf70ba21)
