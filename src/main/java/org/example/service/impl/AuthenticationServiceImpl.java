@@ -46,7 +46,11 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         user.setUsername(registerRequest.getUsername());
         user.setPassword(passwordEncoder.encode(registerRequest.getPassword()));
         user.setUserType(registerRequest.getUserType());
-        user.setUserCreationDate(LocalDate.now());
+        user.setUserCreationDate(registerRequest.getUserCreationDate());
+        if (registerRequest.getUserCreationDate() == null) {
+            user.setUserCreationDate(LocalDate.now());
+        }
+
         userRepository.save(user);
         return new RegisterResponse(user.getUsername());
     }
