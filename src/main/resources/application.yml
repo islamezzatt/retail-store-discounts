@@ -1,0 +1,36 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: retaildb
+#spring:
+#  data:
+#    mongodb:
+#      uri: ${SPRING_DATA_MONGODB_URI}
+logging:
+  level:
+    org.springframework: INFO
+    org.hibernate: ERROR
+    com.example.mypackage: DEBUG
+security:
+  jwt:
+    #secret-key: 3cfa76ef14937c1c0ea519f8fc057a80fcd04a7420f8e8bcd0a7567c272e007b
+    secret-key: 4ae6314f9982ca3f60d75dcfb82efa1c80815df4e9798869c66638f041879150
+    expiration-time: 3600000
+
+data-loader:
+  users:
+    - username: "employee"
+      password: "password123"
+      userType: "EMPLOYEE"
+    - username: "affiliate"
+      password: "password123"
+      userType: "AFFILIATE"
+    - username: "loyal"
+      password: "password123"
+      userType: "REGULAR"
+      userCreationDate: 2020-11-08T21:00:00.000+00:00
+    - username: "regular"
+      password: "password123"
+      userType: "REGULAR"
