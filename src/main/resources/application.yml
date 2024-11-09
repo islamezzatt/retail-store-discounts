@@ -1,13 +1,7 @@
 spring:
   data:
     mongodb:
-      host: localhost
-      port: 27017
-      database: retaildb
-#spring:
-#  data:
-#    mongodb:
-#      uri: ${SPRING_DATA_MONGODB_URI}
+      uri: ${SPRING_DATA_MONGODB_URI}
 logging:
   level:
     org.springframework: INFO
@@ -15,7 +9,6 @@ logging:
     com.example.mypackage: DEBUG
 security:
   jwt:
-    #secret-key: 3cfa76ef14937c1c0ea519f8fc057a80fcd04a7420f8e8bcd0a7567c272e007b
     secret-key: 4ae6314f9982ca3f60d75dcfb82efa1c80815df4e9798869c66638f041879150
     expiration-time: 3600000
 
