@@ -24,6 +24,7 @@ public class CheckoutServiceImpl implements CheckoutService {
         this.discountFactory = discountFactory;
     }
 
+    @Override
     public CheckoutResponse calculateDiscount(CustomUserDetails userDetails, CheckoutRequest checkoutRequest) {
         DiscountStrategy discountStrategy = getDiscountStrategy(userDetails.getUser());
         double totalBillAmount = checkoutRequest.getItems().stream().mapToDouble(Item::getPrice).sum();
