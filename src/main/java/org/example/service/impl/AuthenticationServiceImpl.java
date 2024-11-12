@@ -41,7 +41,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     @Override
     public RegisterResponse register(RegisterRequest registerRequest) {
         if (userRepository.findByUsername(registerRequest.getUsername()).isPresent()) {
-            throw new UsernameAlreadyExistsException("Username already exists."); // You can throw a custom exception instead
+            throw new UsernameAlreadyExistsException("Username already exists.");
         }
         User user = new User();
         user.setUsername(registerRequest.getUsername());
